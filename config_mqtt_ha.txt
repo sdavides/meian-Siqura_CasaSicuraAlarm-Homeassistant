@@ -1,0 +1,12 @@
+# Allarme CASASICURA siqura wifi
+mqtt:
+  alarm_control_panel:
+    - name: Allarme
+      object_id: Pannello Allarme
+      unique_id: Pannello Allarme
+      state_topic: home/alarm/state
+      command_topic: home/alarm/set
+      payload_disarm: DISARMED
+      payload_arm_home: ARMED_HOME
+      payload_arm_away: ARMED_AWAY
+      qos: 2
