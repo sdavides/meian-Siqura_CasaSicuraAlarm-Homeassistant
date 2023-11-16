@@ -1,0 +1,1 @@
+# sdavides-meian-Siqura_CasaSicuraAlarm-Homeassistant
