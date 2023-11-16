@@ -1,4 +1,4 @@
-# sdavides-meian-Siqura_CasaSicuraAlarm-HomeassistantGoal: Siqura Allarme CasaSicura.it on HomeAssistant
+Goal: Siqura Allarme CasaSicura.it on HomeAssistant
 
 -  this flow is example and was developed for Siqura Alarm like Meian/Emooluxr (CasaSicura.it/Antifurto365.it)
   
