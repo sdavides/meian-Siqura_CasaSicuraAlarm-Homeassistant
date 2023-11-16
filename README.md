@@ -57,5 +57,6 @@ Mosquitto broker on HomeAssistant
   
   Set config by command
 
-  ![immagine](https://github.com/sdavides/sdavides-meian-Siqura_CasaSicuraAlarm-Homeassistant/assets/31100253/3bc5f269-97ed-442e-aab0-ed2511a05f2c)
+  ![immagine](https://github.com/sdavides/sdavides-meian-Siqura_CasaSicuraAlarm-Homeassistant/assets/31100253/d35dd086-1f13-40a7-9793-2fc4d70a2cb8)
+
 
