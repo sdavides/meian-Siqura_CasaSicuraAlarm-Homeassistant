@@ -1,0 +1,226 @@
+
+# stato senza trigger
+sensor:
+  - platform: rest
+    resource: http://192.168.1.170/RemoteCtr.htm
+    name: ialarm_stato
+    authentication: basic
+    username: admin
+    password: 012345
+    scan_interval: 30
+    value_template: >-
+        {% set status = value.split('selected="selected">')[1].split('<')[0]%}
+        {% if status == "OFF centrale" %}
+        Disarmato
+        {% elif status == "ON Parziale" %}
+        Armato in casa
+        {% elif status == "ON Totale" %}
+        Armato
+        {% else %}
+        {{ status }}
+        {% endif %}
+          
+## Rest comandi           
+rest_command:
+  ialarm_disarm:
+    url: http://192.168.1.170/RemoteCtr.htm
+    method: POST
+    username: admin
+    password: 012345
+    payload: 'Ctrl=3 BypassNum=00 BypassOpt=0'
+  ialarm_arm:
+    url: http://192.168.1.170/RemoteCtr.htm
+    method: POST
+    username: admin
+    password: 012345
+    payload: 'Ctrl=1 BypassNum=00 BypassOpt=0'
+  ialarm_home:
+    url: http://192.168.1.170/RemoteCtr.htm
+    method: POST
+    username: admin
+    password: 012345
+    payload: 'Ctrl=2 BypassNum=00 BypassOpt=0'
+  ialarm_refresh:
+    url: http://192.168.1.170/RemoteCtr.htm
+    method: POST
+    username: admin
+    password: 012345
+    payload: 'Ctrl=4 BypassNum=00 BypassOpt=0'
+    
+  ialarm_bypass1_on:
+    url: http://192.168.1.170/RemoteCtr.htm
+    method: POST
+    username: admin
+    password: 012345
+    payload: 'Ctrl=0&BypassNum=01&BypassOpt=1'
+  ialarm_bypass1_off:
+    url: http://192.168.1.170/RemoteCtr.htm
+    method: POST
+    username: admin
+    password: 012345
+    payload: 'Ctrl=0&BypassNum=01&BypassOpt=2'
+  ialarm_bypass2_on:
+    url: http://192.168.1.170/RemoteCtr.htm
+    method: POST
+    username: admin
+    password: 012345
+    payload: 'Ctrl=0&BypassNum=02&BypassOpt=1'
+  ialarm_bypass2_off:
+    url: http://192.168.1.170/RemoteCtr.htm
+    method: POST
+    username: admin
+    password: 012345
+    payload: 'Ctrl=0&BypassNum=02&BypassOpt=2'
+  ialarm_bypass3_on:
+    url: http://192.168.1.170/RemoteCtr.htm
+    method: POST
+    username: admin
+    password: 012345
+    payload: 'Ctrl=0&BypassNum=03&BypassOpt=1'
+  ialarm_bypass3_off:
+    url: http://192.168.1.170/RemoteCtr.htm
+    method: POST
+    username: admin
+    password: 012345
+    payload: 'Ctrl=0&BypassNum=03&BypassOpt=2'
+  ialarm_bypass4_on:
+    url: http://192.168.1.170/RemoteCtr.htm
+    method: POST
+    username: admin
+    password: 012345
+    payload: 'Ctrl=0&BypassNum=04&BypassOpt=1'
+  ialarm_bypass4_off:
+    url: http://192.168.1.170/RemoteCtr.htm
+    method: POST
+    username: admin
+    password: 012345
+    payload: 'Ctrl=0&BypassNum=04&BypassOpt=2'
+  ialarm_bypass5_on:
+    url: http://192.168.1.170/RemoteCtr.htm
+    method: POST
+    username: admin
+    password: 012345
+    payload: 'Ctrl=0&BypassNum=05&BypassOpt=1'
+  ialarm_bypass5_off:
+    url: http://192.168.1.170/RemoteCtr.htm
+    method: POST
+    username: admin
+    password: 012345
+    payload: 'Ctrl=0&BypassNum=05&BypassOpt=2'
+  ialarm_bypass6_on:
+    url: http://192.168.1.170/RemoteCtr.htm
+    method: POST
+    username: admin
+    password: 012345
+    payload: 'Ctrl=0&BypassNum=06&BypassOpt=1'
+  ialarm_bypass6_off:
+    url: http://192.168.1.170/RemoteCtr.htm
+    method: POST
+    username: admin
+    password: 012345
+    payload: 'Ctrl=0&BypassNum=06&BypassOpt=2'
+
+## Arma disarma in casa   
+switch:
+  - platform: template
+    switches:
+      ialarm_disarma:
+        value_template: "off"
+        turn_on:
+          service: rest_command.ialarm_disarm
+          target:
+            entity_id: switch.ialarm_disarma
+        turn_off:
+  - platform: template
+    switches:
+      ialarm_arma:
+        value_template: "off"
+        turn_on:
+          service: rest_command.ialarm_arm
+          target:
+            entity_id: switch.ialarm_arma
+        turn_off:
+  - platform: template
+    switches:
+      ialarm_armaincasa:
+        value_template: "off"
+        turn_on:
+          service: rest_command.ialarm_home
+          target:
+            entity_id: switch.ialarm_armaincasa
+        turn_off:
+        
+## Bypass        
+  - platform: template
+    switches:
+      bypass_camera_letto:
+        value_template: "{{ states.binary_sensor.camera_letto.attributes.bypass }}"
+        turn_on:
+          service: rest_command.ialarm_bypass1_on
+          target:
+            entity_id: switch.ialarm_bypass1
+        turn_off:
+          service: rest_command.ialarm_bypass1_off
+          target:
+            entity_id: switch.ialarm_bypass1        
+  - platform: template
+    switches:
+      bypass_bagno:
+        value_template: "{{ states.binary_sensor.bagno.attributes.bypass }}"
+        turn_on:
+          service: rest_command.ialarm_bypass2_on
+          target:
+            entity_id: switch.ialarm_bypass2
+        turn_off:
+          service: rest_command.ialarm_bypass2_off
+          target:
+            entity_id: switch.ialarm_bypass2          
+  - platform: template
+    switches:
+      bypass_cucina:
+        value_template: "{{ states.binary_sensor.cucina.attributes.bypass }}"
+        turn_on:
+          service: rest_command.ialarm_bypass3_on
+          target:
+            entity_id: switch.ialarm_bypass3
+        turn_off:
+          service: rest_command.ialarm_bypass3_off
+          target:
+            entity_id: switch.ialarm_bypass3          
+  - platform: template
+    switches:
+      bypass_bagnetto:
+        value_template: "{{ states.binary_sensor.bagnetto.attributes.bypass }}"
+        turn_on:
+          service: rest_command.ialarm_bypass4_on
+          target:
+            entity_id: switch.ialarm_bypass4
+        turn_off:
+          service: rest_command.ialarm_bypass4_off
+          target:
+            entity_id: switch.ialarm_bypass4
+  - platform: template
+    switches:
+      bypass_studio:
+        value_template: "{{ states.binary_sensor.studio.attributes.bypass }}"
+        turn_on:
+          service: rest_command.ialarm_bypass5_on
+          target:
+            entity_id: switch.ialarm_bypass5
+        turn_off:
+          service: rest_command.ialarm_bypass5_off
+          target:
+            entity_id: switch.ialarm_bypass5
+  - platform: template
+    switches:
+      bypass_porta:
+        value_template: "{{ states.binary_sensor.porta.attributes.bypass }}"
+        turn_on:
+          service: rest_command.ialarm_bypass6_on
+          target:
+            entity_id: switch.ialarm_bypass6
+        turn_off:
+          service: rest_command.ialarm_bypass6_off
+          target:
+            entity_id: switch.ialarm_bypass6
+        
