@@ -53,6 +53,12 @@ Mosquitto broker on HomeAssistant
 
 ---
 
+- use rest/post commands if you don't want to use NodeRed
+
+  (rest_post_command_without_Nodered.txt)
+
+---
+
 - Trick
   
   Set config by command
