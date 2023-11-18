@@ -12,6 +12,8 @@ Method 2 without NodeRed
 
 ---
 
+Method 1
+
 - Requirement:
 
 NodeRed on HomeAssistant 
