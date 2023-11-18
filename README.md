@@ -4,6 +4,11 @@ Goal: Siqura Allarme CasaSicura.it on HomeAssistant
   
 ![immagine](https://github.com/sdavides/sdavides-meian-Siqura_CasaSicuraAlarm-Homeassistant/assets/31100253/4bd246c2-d8a4-4c44-9af6-84b9ed796af7)
 
+Method 1 NodeRed
+(CasaSicura_NodeRed.json)
+
+Method 2 without NodeRed
+(rest_post_command_without_Nodered.txt)
 
 ---
 
