@@ -20,7 +20,8 @@ Goal: Siqura Alarm like Meian/Emooluxr (CasaSicura.it/Antifurto365.it) on HomeAs
 ## Method ##
 * Method 1 NodeRed (recommended):
 	* Import flow json 
-	* Replace your value "ialarm-server" node 
+	* Replace your value "ialarm-server" node
+ 	* Copy and paste config_mqtt_ha.txt on configuration.yaml
 	* Deploy
 	
 * Method 2 RestFul (without NodeRed):
