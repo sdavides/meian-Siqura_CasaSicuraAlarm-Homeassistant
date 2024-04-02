@@ -50,7 +50,7 @@ Goal: Siqura Alarm like Meian/Emooluxr (CasaSicura.it/Antifurto365.it) on HomeAs
 
 ---
 
-## TIPS Hub G3 ##
+## TIPS ##
 
 * Set config by command string
 
