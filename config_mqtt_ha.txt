@@ -9,4 +9,6 @@ mqtt:
       payload_disarm: DISARMED
       payload_arm_home: ARMED_HOME
       payload_arm_away: ARMED_AWAY
+      code_arm_required: false
+      code_disarm_required: false
       qos: 2
