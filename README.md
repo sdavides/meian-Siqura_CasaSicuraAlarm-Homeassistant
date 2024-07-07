@@ -64,5 +64,3 @@ Goal: Siqura Alarm like Meian/Emooluxr (CasaSicura.it/Antifurto365.it) on HomeAs
 [ialarm-mqtt](https://github.com/maxill1/ialarm-mqtt)
      
 [meian-client](https://github.com/wildstray/meian-client)
-
-[Forum](https://github.com/indomus/forum/discussions/239)
