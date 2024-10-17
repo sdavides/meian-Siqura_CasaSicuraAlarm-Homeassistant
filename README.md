@@ -1,7 +1,7 @@
 ----
 ----
 
-#  NginxReverse addon addon #
+#  NginxReverse addon  #
 
 ![images](https://github.com/user-attachments/assets/5a658414-ff3d-4546-a655-fbd2f124e968)
 
