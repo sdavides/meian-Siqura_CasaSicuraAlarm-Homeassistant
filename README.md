@@ -3,11 +3,12 @@
 
 #  NginxReverse addon  #
 
-![images](https://github.com/user-attachments/assets/5a658414-ff3d-4546-a655-fbd2f124e968)
-
 Accedi alla pagina della centralina da Home Assistant
 
   * [NginxReverse-Homeassistant](https://github.com/sdavides/NginxReverse-Homeassistant)
+
+![immagine](https://github.com/user-attachments/assets/6f408af1-c3b2-4ad3-aece-fc118387fef0)
+
   
 ----
 
