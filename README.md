@@ -1,3 +1,19 @@
+----
+----
+
+#  NginxReverse addon addon #
+
+![images](https://github.com/user-attachments/assets/5a658414-ff3d-4546-a655-fbd2f124e968)
+
+Accedi alla pagina della centralina da Home Assistant
+
+  * [NginxReverse-Homeassistant](https://github.com/sdavides/NginxReverse-Homeassistant)
+  
+----
+
+----
+
+
 #  Siqura Allarme CasaSicura.it on HomeAssistant #
 
 Goal: Siqura Alarm like Meian/Emooluxr (CasaSicura.it/Antifurto365.it) on HomeAssistant
