@@ -1,4 +1,17 @@
-
+##### TO DO 
+##### example
+#rest:
+#  resource: http://192.168.1.170/Option.htm
+#  authentication: basic
+#  username: admin
+#  password: '01234'
+#  scan_interval: 60
+#  sensor:
+#    - name: "Option"
+#      value_template: "{{ value.split('name=')[3].split(' ')[0].replace('\"','') }} {{ value.split('name=')[3].split('value=')[1].split('/')[0].replace('\"','') }}"
+#
+#######
+  
 # stato senza trigger
 sensor:
   - platform: rest
