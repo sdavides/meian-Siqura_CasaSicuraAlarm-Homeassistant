@@ -7,6 +7,8 @@ Accedi alla pagina della centralina da Home Assistant
 
   * [NginxReverse-Homeassistant](https://github.com/sdavides/NginxReverse-Homeassistant)
 
+      * ( required "apache" - "fix_resource_proxy_redirect" enable )
+
 ![immagine](https://github.com/user-attachments/assets/6f408af1-c3b2-4ad3-aece-fc118387fef0)
 
   
