@@ -5168,7 +5168,7 @@
         "host": "192.168.1.16",
         "port": "8001",
         "username": "admin",
-        "password": "Local.12$$$%%%",
+        "password": "password",
         "zones": "8"
     },
     {
