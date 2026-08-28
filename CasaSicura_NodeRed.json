@@ -16,7 +16,19 @@
         "y": 360,
         "wires": [["8b63d5ad08dcbb37"]]
     },
-    { "id": "ef2b531a6aa04646", "type": "mqtt out", "z": "faa08695e1670414", "name": "", "topic": "home/alarm/state", "qos": "2", "retain": "", "broker": "c851cc16.b7689", "x": 990, "y": 1080, "wires": [] },
+    {
+        "id": "ef2b531a6aa04646",
+        "type": "mqtt out",
+        "z": "faa08695e1670414",
+        "name": "",
+        "topic": "home/alarm/state",
+        "qos": "2",
+        "retain": "",
+        "broker": "c851cc16.b7689",
+        "x": 990,
+        "y": 1080,
+        "wires": []
+    },
     {
         "id": "addcd05142ea32c4",
         "type": "ha-binary-sensor",
@@ -253,7 +265,17 @@
         "type": "change",
         "z": "faa08695e1670414",
         "name": "modifica messaggi Panico",
-        "rules": [{ "t": "change", "p": "payload[0].message", "pt": "msg", "from": "Panico", "fromt": "str", "to": "SOS/Panico ", "tot": "str" }],
+        "rules": [
+            {
+                "t": "change",
+                "p": "payload[0].message",
+                "pt": "msg",
+                "from": "Panico",
+                "fromt": "str",
+                "to": "SOS/Panico ",
+                "tot": "str"
+            }
+        ],
         "action": "",
         "property": "",
         "from": "",
@@ -268,7 +290,17 @@
         "type": "change",
         "z": "faa08695e1670414",
         "name": "modifica messaggi Zona Bypass",
-        "rules": [{ "t": "change", "p": "payload[0].message", "pt": "msg", "from": "Zona Bypass", "fromt": "str", "to": " Bypass attivato ", "tot": "str" }],
+        "rules": [
+            {
+                "t": "change",
+                "p": "payload[0].message",
+                "pt": "msg",
+                "from": "Zona Bypass",
+                "fromt": "str",
+                "to": " Bypass attivato ",
+                "tot": "str"
+            }
+        ],
         "action": "",
         "property": "",
         "from": "",
@@ -292,14 +324,34 @@
         "libs": [],
         "x": 1420,
         "y": 1280,
-        "wires": [["addcd05142ea32c4", "bd909e7bb5d3d288", "a689663b9c2a7bc9", "eeb1927d26111b3c", "d88298d39f08ef5c", "72181472630265b9", "5eb58b9be2360aae"]]
+        "wires": [
+            [
+                "addcd05142ea32c4",
+                "bd909e7bb5d3d288",
+                "a689663b9c2a7bc9",
+                "eeb1927d26111b3c",
+                "d88298d39f08ef5c",
+                "72181472630265b9",
+                "5eb58b9be2360aae"
+            ]
+        ]
     },
     {
         "id": "816a671b8da8bd1f",
         "type": "change",
         "z": "faa08695e1670414",
         "name": "modifica messaggi Zone Bypass Cancellata",
-        "rules": [{ "t": "change", "p": "payload[0].message", "pt": "msg", "from": "Zone Bypass Cancellata", "fromt": "str", "to": " Bypass cancellato ", "tot": "str" }],
+        "rules": [
+            {
+                "t": "change",
+                "p": "payload[0].message",
+                "pt": "msg",
+                "from": "Zone Bypass Cancellata",
+                "fromt": "str",
+                "to": " Bypass cancellato ",
+                "tot": "str"
+            }
+        ],
         "action": "",
         "property": "",
         "from": "",
@@ -314,7 +366,17 @@
         "type": "change",
         "z": "faa08695e1670414",
         "name": "modifica messaggi Perimetrale",
-        "rules": [{ "t": "change", "p": "payload[0].message", "pt": "msg", "from": "Perimetrale", "fromt": "str", "to": "Allarme ", "tot": "str" }],
+        "rules": [
+            {
+                "t": "change",
+                "p": "payload[0].message",
+                "pt": "msg",
+                "from": "Perimetrale",
+                "fromt": "str",
+                "to": "Allarme ",
+                "tot": "str"
+            }
+        ],
         "action": "",
         "property": "",
         "from": "",
@@ -329,7 +391,17 @@
         "type": "change",
         "z": "faa08695e1670414",
         "name": "modifica messaggi Ritardata",
-        "rules": [{ "t": "change", "p": "payload[0].message", "pt": "msg", "from": "Ritardata", "fromt": "str", "to": "Allarme ", "tot": "str" }],
+        "rules": [
+            {
+                "t": "change",
+                "p": "payload[0].message",
+                "pt": "msg",
+                "from": "Ritardata",
+                "fromt": "str",
+                "to": "Allarme ",
+                "tot": "str"
+            }
+        ],
         "action": "",
         "property": "",
         "from": "",
@@ -344,7 +416,17 @@
         "type": "change",
         "z": "faa08695e1670414",
         "name": "modifica messaggi Interna",
-        "rules": [{ "t": "change", "p": "payload[0].message", "pt": "msg", "from": "Interna", "fromt": "str", "to": "Allarme ", "tot": "str" }],
+        "rules": [
+            {
+                "t": "change",
+                "p": "payload[0].message",
+                "pt": "msg",
+                "from": "Interna",
+                "fromt": "str",
+                "to": "Allarme ",
+                "tot": "str"
+            }
+        ],
         "action": "",
         "property": "",
         "from": "",
@@ -360,11 +442,51 @@
         "z": "faa08695e1670414",
         "name": "Report Status",
         "rules": [
-            { "t": "change", "p": "payload", "pt": "msg", "from": "disarmed", "fromt": "str", "to": "Disarmato", "tot": "str" },
-            { "t": "change", "p": "payload", "pt": "msg", "from": "armed_away", "fromt": "str", "to": "Attivo fuori casa", "tot": "str" },
-            { "t": "change", "p": "payload", "pt": "msg", "from": "armed_home", "fromt": "str", "to": "Attivo in casa", "tot": "str" },
-            { "t": "change", "p": "payload", "pt": "msg", "from": "triggered", "fromt": "str", "to": "In allarme", "tot": "str" },
-            { "t": "change", "p": "payload", "pt": "msg", "from": "cancel", "fromt": "str", "to": "Cancellato", "tot": "str" }
+            {
+                "t": "change",
+                "p": "payload",
+                "pt": "msg",
+                "from": "disarmed",
+                "fromt": "str",
+                "to": "Disarmato",
+                "tot": "str"
+            },
+            {
+                "t": "change",
+                "p": "payload",
+                "pt": "msg",
+                "from": "armed_away",
+                "fromt": "str",
+                "to": "Attivo fuori casa",
+                "tot": "str"
+            },
+            {
+                "t": "change",
+                "p": "payload",
+                "pt": "msg",
+                "from": "armed_home",
+                "fromt": "str",
+                "to": "Attivo in casa",
+                "tot": "str"
+            },
+            {
+                "t": "change",
+                "p": "payload",
+                "pt": "msg",
+                "from": "triggered",
+                "fromt": "str",
+                "to": "In allarme",
+                "tot": "str"
+            },
+            {
+                "t": "change",
+                "p": "payload",
+                "pt": "msg",
+                "from": "cancel",
+                "fromt": "str",
+                "to": "Cancellato",
+                "tot": "str"
+            }
         ],
         "action": "",
         "property": "",
@@ -395,7 +517,11 @@
         "type": "inject",
         "z": "faa08695e1670414",
         "name": "timestamp +15s +1h",
-        "props": [{ "p": "payload" }, { "p": "method", "v": "GET", "vt": "str" }, { "p": "lastchecked", "v": "", "vt": "date" }],
+        "props": [
+            { "p": "payload" },
+            { "p": "method", "v": "GET", "vt": "str" },
+            { "p": "lastchecked", "v": "", "vt": "date" }
+        ],
         "repeat": "4500",
         "crontab": "",
         "once": true,
@@ -415,7 +541,7 @@
         "method": "use",
         "ret": "txt",
         "paytoqs": "ignore",
-        "url": "http://casa-pis.ns0.it:8001/UserPhone.htm",
+        "url": "http://192.168.1.8:8001/UserPhone.htm",
         "tls": "",
         "persist": false,
         "proxy": "",
@@ -427,8 +553,26 @@
         "y": 3180,
         "wires": [["a9365bd754ffa987"]]
     },
-    { "id": "86e5d71929b09b97", "type": "comment", "z": "faa08695e1670414", "name": "Numeri telefonici", "info": "", "x": 1720, "y": 3180, "wires": [] },
-    { "id": "ca859349581e75d1", "type": "comment", "z": "faa08695e1670414", "name": "Centro Controllo Cloud", "info": "", "x": 1680, "y": 3400, "wires": [] },
+    {
+        "id": "86e5d71929b09b97",
+        "type": "comment",
+        "z": "faa08695e1670414",
+        "name": "Numeri telefonici",
+        "info": "",
+        "x": 1720,
+        "y": 3180,
+        "wires": []
+    },
+    {
+        "id": "ca859349581e75d1",
+        "type": "comment",
+        "z": "faa08695e1670414",
+        "name": "Centro Controllo Cloud",
+        "info": "",
+        "x": 1680,
+        "y": 3400,
+        "wires": []
+    },
     {
         "id": "41fb723505cf46d0",
         "type": "http request",
@@ -437,7 +581,7 @@
         "method": "use",
         "ret": "txt",
         "paytoqs": "ignore",
-        "url": "http://casa-pis.ns0.it:8001/Network.htm",
+        "url": "http://192.168.1.8:8001/Network.htm",
         "tls": "",
         "persist": false,
         "proxy": "",
@@ -449,7 +593,16 @@
         "y": 3720,
         "wires": [["d8c75076426d053f"]]
     },
-    { "id": "88c8a52248a5dc33", "type": "comment", "z": "faa08695e1670414", "name": "Configurazione di rete", "info": "", "x": 1680, "y": 3880, "wires": [] },
+    {
+        "id": "88c8a52248a5dc33",
+        "type": "comment",
+        "z": "faa08695e1670414",
+        "name": "Configurazione di rete",
+        "info": "",
+        "x": 1680,
+        "y": 3880,
+        "wires": []
+    },
     {
         "id": "a21587ea2c1609b2",
         "type": "http request",
@@ -458,7 +611,7 @@
         "method": "use",
         "ret": "txt",
         "paytoqs": "ignore",
-        "url": "http://casa-pis.ns0.it:8001/Option.htm",
+        "url": "http://192.168.1.8:8001/Option.htm",
         "tls": "",
         "persist": false,
         "proxy": "",
@@ -476,8 +629,24 @@
         "z": "faa08695e1670414",
         "name": "Report ON/OFF",
         "rules": [
-            { "t": "change", "p": "payload.ArmReport", "pt": "msg", "from": "2", "fromt": "str", "to": "NO", "tot": "str" },
-            { "t": "change", "p": "payload.ArmReport", "pt": "msg", "from": "1", "fromt": "str", "to": "SI", "tot": "str" }
+            {
+                "t": "change",
+                "p": "payload.ArmReport",
+                "pt": "msg",
+                "from": "2",
+                "fromt": "str",
+                "to": "NO",
+                "tot": "str"
+            },
+            {
+                "t": "change",
+                "p": "payload.ArmReport",
+                "pt": "msg",
+                "from": "1",
+                "fromt": "str",
+                "to": "SI",
+                "tot": "str"
+            }
         ],
         "action": "",
         "property": "",
@@ -494,8 +663,24 @@
         "z": "faa08695e1670414",
         "name": "ON centrale forzato",
         "rules": [
-            { "t": "change", "p": "payload.ForceArm", "pt": "msg", "from": "1", "fromt": "str", "to": "SI", "tot": "str" },
-            { "t": "change", "p": "payload.ForceArm", "pt": "msg", "from": "2", "fromt": "str", "to": "NO", "tot": "str" }
+            {
+                "t": "change",
+                "p": "payload.ForceArm",
+                "pt": "msg",
+                "from": "1",
+                "fromt": "str",
+                "to": "SI",
+                "tot": "str"
+            },
+            {
+                "t": "change",
+                "p": "payload.ForceArm",
+                "pt": "msg",
+                "from": "2",
+                "fromt": "str",
+                "to": "NO",
+                "tot": "str"
+            }
         ],
         "action": "",
         "property": "",
@@ -512,8 +697,24 @@
         "z": "faa08695e1670414",
         "name": "Tono acustico ON/OFF ",
         "rules": [
-            { "t": "change", "p": "payload.ArmClew", "pt": "msg", "from": "1", "fromt": "str", "to": "Sirena suono breve", "tot": "str" },
-            { "t": "change", "p": "payload.ArmClew", "pt": "msg", "from": "2", "fromt": "str", "to": "Disabilitato", "tot": "str" }
+            {
+                "t": "change",
+                "p": "payload.ArmClew",
+                "pt": "msg",
+                "from": "1",
+                "fromt": "str",
+                "to": "Sirena suono breve",
+                "tot": "str"
+            },
+            {
+                "t": "change",
+                "p": "payload.ArmClew",
+                "pt": "msg",
+                "from": "2",
+                "fromt": "str",
+                "to": "Disabilitato",
+                "tot": "str"
+            }
         ],
         "action": "",
         "property": "",
@@ -530,8 +731,24 @@
         "z": "faa08695e1670414",
         "name": "Controllo aperto/chiuso",
         "rules": [
-            { "t": "change", "p": "payload.DoorDetect", "pt": "msg", "from": "1", "fromt": "re", "to": "SI", "tot": "str" },
-            { "t": "change", "p": "payload.DoorDetect", "pt": "msg", "from": "2", "fromt": "str", "to": "NO", "tot": "str" }
+            {
+                "t": "change",
+                "p": "payload.DoorDetect",
+                "pt": "msg",
+                "from": "1",
+                "fromt": "re",
+                "to": "SI",
+                "tot": "str"
+            },
+            {
+                "t": "change",
+                "p": "payload.DoorDetect",
+                "pt": "msg",
+                "from": "2",
+                "fromt": "str",
+                "to": "NO",
+                "tot": "str"
+            }
         ],
         "action": "",
         "property": "",
@@ -548,8 +765,24 @@
         "z": "faa08695e1670414",
         "name": "Controllo tamper sensori",
         "rules": [
-            { "t": "change", "p": "payload.wlsTamper", "pt": "msg", "from": "1", "fromt": "str", "to": "SI", "tot": "str" },
-            { "t": "change", "p": "payload.wlsTamper", "pt": "msg", "from": "2", "fromt": "str", "to": "NO", "tot": "str" }
+            {
+                "t": "change",
+                "p": "payload.wlsTamper",
+                "pt": "msg",
+                "from": "1",
+                "fromt": "str",
+                "to": "SI",
+                "tot": "str"
+            },
+            {
+                "t": "change",
+                "p": "payload.wlsTamper",
+                "pt": "msg",
+                "from": "2",
+                "fromt": "str",
+                "to": "NO",
+                "tot": "str"
+            }
         ],
         "action": "",
         "property": "",
@@ -566,8 +799,24 @@
         "z": "faa08695e1670414",
         "name": "Riciclo allarme zone",
         "rules": [
-            { "t": "change", "p": "payload.AlarmLimit", "pt": "msg", "from": "1", "fromt": "str", "to": "3 volte", "tot": "str" },
-            { "t": "change", "p": "payload.AlarmLimit", "pt": "msg", "from": "2", "fromt": "str", "to": "Illimitato", "tot": "str" }
+            {
+                "t": "change",
+                "p": "payload.AlarmLimit",
+                "pt": "msg",
+                "from": "1",
+                "fromt": "str",
+                "to": "3 volte",
+                "tot": "str"
+            },
+            {
+                "t": "change",
+                "p": "payload.AlarmLimit",
+                "pt": "msg",
+                "from": "2",
+                "fromt": "str",
+                "to": "Illimitato",
+                "tot": "str"
+            }
         ],
         "action": "",
         "property": "",
@@ -586,7 +835,7 @@
         "method": "use",
         "ret": "txt",
         "paytoqs": "ignore",
-        "url": "http://casa-pis.ns0.it:8001/AlarmEvent.htm",
+        "url": "http://192.168.1.8:8001/AlarmEvent.htm",
         "tls": "",
         "persist": false,
         "proxy": "",
@@ -598,11 +847,56 @@
         "y": 4620,
         "wires": [["c482205b794e7238"]]
     },
-    { "id": "12b9e198b541465f", "type": "comment", "z": "faa08695e1670414", "name": "/Option.htm", "info": "", "x": 1310, "y": 2360, "wires": [] },
-    { "id": "403bf7917bae3605", "type": "comment", "z": "faa08695e1670414", "name": "/Network.htm", "info": "", "x": 1290, "y": 3680, "wires": [] },
-    { "id": "ae72af549918647d", "type": "comment", "z": "faa08695e1670414", "name": "/UserPhone.htm", "info": "", "x": 1360, "y": 3140, "wires": [] },
-    { "id": "2292ee8e0b9f03cc", "type": "comment", "z": "faa08695e1670414", "name": "Configurazione parametri GPRS", "info": "", "x": 2090, "y": 4580, "wires": [] },
-    { "id": "99a30daf2c18233b", "type": "comment", "z": "faa08695e1670414", "name": "/AlarmEvent.htm", "info": "", "x": 1460, "y": 4580, "wires": [] },
+    {
+        "id": "12b9e198b541465f",
+        "type": "comment",
+        "z": "faa08695e1670414",
+        "name": "/Option.htm",
+        "info": "",
+        "x": 1310,
+        "y": 2360,
+        "wires": []
+    },
+    {
+        "id": "403bf7917bae3605",
+        "type": "comment",
+        "z": "faa08695e1670414",
+        "name": "/Network.htm",
+        "info": "",
+        "x": 1290,
+        "y": 3680,
+        "wires": []
+    },
+    {
+        "id": "ae72af549918647d",
+        "type": "comment",
+        "z": "faa08695e1670414",
+        "name": "/UserPhone.htm",
+        "info": "",
+        "x": 1360,
+        "y": 3140,
+        "wires": []
+    },
+    {
+        "id": "2292ee8e0b9f03cc",
+        "type": "comment",
+        "z": "faa08695e1670414",
+        "name": "Configurazione parametri GPRS",
+        "info": "",
+        "x": 2090,
+        "y": 4580,
+        "wires": []
+    },
+    {
+        "id": "99a30daf2c18233b",
+        "type": "comment",
+        "z": "faa08695e1670414",
+        "name": "/AlarmEvent.htm",
+        "info": "",
+        "x": 1460,
+        "y": 4580,
+        "wires": []
+    },
     {
         "id": "125426478a4c9408",
         "type": "ha-sensor",
@@ -729,7 +1023,7 @@
         "method": "GET",
         "ret": "txt",
         "paytoqs": "ignore",
-        "url": "http://casa-pis.ns0.it:8001/Update.htm",
+        "url": "http://192.168.1.8:8001/Update.htm",
         "tls": "",
         "persist": false,
         "proxy": "",
@@ -741,13 +1035,26 @@
         "y": 5660,
         "wires": [["e9a6fc98d3b098f0"]]
     },
-    { "id": "43615cdcff4b8a35", "type": "comment", "z": "faa08695e1670414", "name": "/Update.htm", "info": "", "x": 830, "y": 5620, "wires": [] },
+    {
+        "id": "43615cdcff4b8a35",
+        "type": "comment",
+        "z": "faa08695e1670414",
+        "name": "/Update.htm",
+        "info": "",
+        "x": 830,
+        "y": 5620,
+        "wires": []
+    },
     {
         "id": "991b1094128e6f28",
         "type": "inject",
         "z": "faa08695e1670414",
         "name": "timestamp +20s +1h",
-        "props": [{ "p": "payload" }, { "p": "method", "v": "GET", "vt": "str" }, { "p": "lastchecked", "v": "", "vt": "date" }],
+        "props": [
+            { "p": "payload" },
+            { "p": "method", "v": "GET", "vt": "str" },
+            { "p": "lastchecked", "v": "", "vt": "date" }
+        ],
         "repeat": "4800",
         "crontab": "",
         "once": true,
@@ -764,7 +1071,11 @@
         "type": "inject",
         "z": "faa08695e1670414",
         "name": "timestamp +10s +1h",
-        "props": [{ "p": "payload" }, { "p": "method", "v": "GET", "vt": "str" }, { "p": "lastchecked", "v": "", "vt": "date" }],
+        "props": [
+            { "p": "payload" },
+            { "p": "method", "v": "GET", "vt": "str" },
+            { "p": "lastchecked", "v": "", "vt": "date" }
+        ],
         "repeat": "3600",
         "crontab": "",
         "once": true,
@@ -781,7 +1092,11 @@
         "type": "inject",
         "z": "faa08695e1670414",
         "name": "timestamp +30s +1h",
-        "props": [{ "p": "payload" }, { "p": "method", "v": "GET", "vt": "str" }, { "p": "lastchecked", "v": "", "vt": "date" }],
+        "props": [
+            { "p": "payload" },
+            { "p": "method", "v": "GET", "vt": "str" },
+            { "p": "lastchecked", "v": "", "vt": "date" }
+        ],
         "repeat": "5400",
         "crontab": "",
         "once": true,
@@ -837,7 +1152,7 @@
         "method": "use",
         "ret": "txt",
         "paytoqs": "ignore",
-        "url": "http://192.168.1.16:80/Email.htm",
+        "url": "http://192.168.1.8:8001/Email.htm",
         "tls": "",
         "persist": false,
         "proxy": "",
@@ -849,13 +1164,26 @@
         "y": 4240,
         "wires": [["75482d10549b3632"]]
     },
-    { "id": "5e23b087753c9618", "type": "comment", "z": "faa08695e1670414", "name": "/Email.htm", "info": "", "x": 1360, "y": 4200, "wires": [] },
+    {
+        "id": "5e23b087753c9618",
+        "type": "comment",
+        "z": "faa08695e1670414",
+        "name": "/Email.htm",
+        "info": "",
+        "x": 1360,
+        "y": 4200,
+        "wires": []
+    },
     {
         "id": "42394ec0d88ab039",
         "type": "inject",
         "z": "faa08695e1670414",
         "name": "timestamp +25s +1h",
-        "props": [{ "p": "payload" }, { "p": "method", "v": "GET", "vt": "str" }, { "p": "lastchecked", "v": "", "vt": "date" }],
+        "props": [
+            { "p": "payload" },
+            { "p": "method", "v": "GET", "vt": "str" },
+            { "p": "lastchecked", "v": "", "vt": "date" }
+        ],
         "repeat": "5100",
         "crontab": "",
         "once": true,
@@ -941,7 +1269,7 @@
         "method": "GET",
         "ret": "txt",
         "paytoqs": "ignore",
-        "url": "http://192.168.1.16:80/Password.htm",
+        "url": "http://192.168.1.8:8001/Password.htm",
         "tls": "",
         "persist": false,
         "proxy": "",
@@ -953,7 +1281,16 @@
         "y": 5380,
         "wires": [["6791ac9995a83860"]]
     },
-    { "id": "365bf41f9efa64eb", "type": "comment", "z": "faa08695e1670414", "name": "/Password.htm", "info": "", "x": 820, "y": 5340, "wires": [] },
+    {
+        "id": "365bf41f9efa64eb",
+        "type": "comment",
+        "z": "faa08695e1670414",
+        "name": "/Password.htm",
+        "info": "",
+        "x": 820,
+        "y": 5340,
+        "wires": []
+    },
     {
         "id": "81c794cb54f41773",
         "type": "inject",
@@ -997,7 +1334,17 @@
         "type": "change",
         "z": "faa08695e1670414",
         "name": "modifica messaggi Loop Restore",
-        "rules": [{ "t": "change", "p": "payload[0].message", "pt": "msg", "from": "Loop Restore", "fromt": "str", "to": "sensore chiuso ", "tot": "str" }],
+        "rules": [
+            {
+                "t": "change",
+                "p": "payload[0].message",
+                "pt": "msg",
+                "from": "Loop Restore",
+                "fromt": "str",
+                "to": "sensore chiuso ",
+                "tot": "str"
+            }
+        ],
         "action": "",
         "property": "",
         "from": "",
@@ -1012,7 +1359,17 @@
         "type": "change",
         "z": "faa08695e1670414",
         "name": "modifica messaggi Loop Open/Short",
-        "rules": [{ "t": "change", "p": "payload[0].message", "pt": "msg", "from": "Loop Open/Short", "fromt": "str", "to": "sensore aperto ", "tot": "str" }],
+        "rules": [
+            {
+                "t": "change",
+                "p": "payload[0].message",
+                "pt": "msg",
+                "from": "Loop Open/Short",
+                "fromt": "str",
+                "to": "sensore aperto ",
+                "tot": "str"
+            }
+        ],
         "action": "",
         "property": "",
         "from": "",
@@ -1043,11 +1400,51 @@
         "z": "faa08695e1670414",
         "name": "Report Status",
         "rules": [
-            { "t": "change", "p": "payload", "pt": "msg", "from": "DISARMED", "fromt": "str", "to": "disarmed", "tot": "str" },
-            { "t": "change", "p": "payload", "pt": "msg", "from": "ARMED_AWAY", "fromt": "str", "to": "armed_away", "tot": "str" },
-            { "t": "change", "p": "payload", "pt": "msg", "from": "ARMED_HOME", "fromt": "str", "to": "armed_home", "tot": "str" },
-            { "t": "change", "p": "payload", "pt": "msg", "from": "TRIGGERED", "fromt": "str", "to": "triggered", "tot": "str" },
-            { "t": "change", "p": "payload", "pt": "msg", "from": "CANCEL", "fromt": "str", "to": "cancel", "tot": "str" }
+            {
+                "t": "change",
+                "p": "payload",
+                "pt": "msg",
+                "from": "DISARMED",
+                "fromt": "str",
+                "to": "disarmed",
+                "tot": "str"
+            },
+            {
+                "t": "change",
+                "p": "payload",
+                "pt": "msg",
+                "from": "ARMED_AWAY",
+                "fromt": "str",
+                "to": "armed_away",
+                "tot": "str"
+            },
+            {
+                "t": "change",
+                "p": "payload",
+                "pt": "msg",
+                "from": "ARMED_HOME",
+                "fromt": "str",
+                "to": "armed_home",
+                "tot": "str"
+            },
+            {
+                "t": "change",
+                "p": "payload",
+                "pt": "msg",
+                "from": "TRIGGERED",
+                "fromt": "str",
+                "to": "triggered",
+                "tot": "str"
+            },
+            {
+                "t": "change",
+                "p": "payload",
+                "pt": "msg",
+                "from": "CANCEL",
+                "fromt": "str",
+                "to": "cancel",
+                "tot": "str"
+            }
         ],
         "action": "",
         "property": "",
@@ -1126,7 +1523,17 @@
         "type": "change",
         "z": "faa08695e1670414",
         "name": "modifica messaggi Sistema Parziale",
-        "rules": [{ "t": "change", "p": "payload[0].message", "pt": "msg", "from": "Sistema Parziale", "fromt": "str", "to": "Sistema Armato in casa ", "tot": "str" }],
+        "rules": [
+            {
+                "t": "change",
+                "p": "payload[0].message",
+                "pt": "msg",
+                "from": "Sistema Parziale",
+                "fromt": "str",
+                "to": "Sistema Armato in casa ",
+                "tot": "str"
+            }
+        ],
         "action": "",
         "property": "",
         "from": "",
@@ -1145,7 +1552,9 @@
         "debugenabled": false,
         "outputs": 1,
         "entityConfig": "0675911be9a95f2c",
-        "outputProperties": [{ "property": "payload", "propertyType": "msg", "value": "ARMED_AWAY", "valueType": "str" }],
+        "outputProperties": [
+            { "property": "payload", "propertyType": "msg", "value": "ARMED_AWAY", "valueType": "str" }
+        ],
         "x": 600,
         "y": 420,
         "wires": [["8b63d5ad08dcbb37"]]
@@ -1173,7 +1582,9 @@
         "debugenabled": false,
         "outputs": 1,
         "entityConfig": "da4545a2172f41a0",
-        "outputProperties": [{ "property": "payload", "propertyType": "msg", "value": "ARMED_HOME", "valueType": "str" }],
+        "outputProperties": [
+            { "property": "payload", "propertyType": "msg", "value": "ARMED_HOME", "valueType": "str" }
+        ],
         "x": 350,
         "y": 480,
         "wires": [["8b63d5ad08dcbb37"]]
@@ -1186,7 +1597,7 @@
         "method": "POST",
         "ret": "txt",
         "paytoqs": "ignore",
-        "url": "http://192.168.1.16:80/RemoteCtr.htm",
+        "url": "http://192.168.1.8:8001/RemoteCtr.htm",
         "tls": "",
         "persist": false,
         "proxy": "",
@@ -1279,8 +1690,24 @@
         "z": "faa08695e1670414",
         "name": "switch 1",
         "rules": [
-            { "t": "change", "p": "payload", "pt": "msg", "from": "true", "fromt": "bool", "to": "Ctrl=0&BypassNum=01&BypassOpt=1", "tot": "str" },
-            { "t": "change", "p": "payload", "pt": "msg", "from": "false", "fromt": "bool", "to": "Ctrl=0&BypassNum=01&BypassOpt=2", "tot": "str" }
+            {
+                "t": "change",
+                "p": "payload",
+                "pt": "msg",
+                "from": "true",
+                "fromt": "bool",
+                "to": "Ctrl=0&BypassNum=01&BypassOpt=1",
+                "tot": "str"
+            },
+            {
+                "t": "change",
+                "p": "payload",
+                "pt": "msg",
+                "from": "false",
+                "fromt": "bool",
+                "to": "Ctrl=0&BypassNum=01&BypassOpt=2",
+                "tot": "str"
+            }
         ],
         "action": "",
         "property": "",
@@ -1297,8 +1724,24 @@
         "z": "faa08695e1670414",
         "name": "switch 1",
         "rules": [
-            { "t": "change", "p": "payload", "pt": "msg", "from": "true", "fromt": "bool", "to": "Ctrl=0&BypassNum=02&BypassOpt=1", "tot": "str" },
-            { "t": "change", "p": "payload", "pt": "msg", "from": "false", "fromt": "bool", "to": "Ctrl=0&BypassNum=02&BypassOpt=2", "tot": "str" }
+            {
+                "t": "change",
+                "p": "payload",
+                "pt": "msg",
+                "from": "true",
+                "fromt": "bool",
+                "to": "Ctrl=0&BypassNum=02&BypassOpt=1",
+                "tot": "str"
+            },
+            {
+                "t": "change",
+                "p": "payload",
+                "pt": "msg",
+                "from": "false",
+                "fromt": "bool",
+                "to": "Ctrl=0&BypassNum=02&BypassOpt=2",
+                "tot": "str"
+            }
         ],
         "action": "",
         "property": "",
@@ -1330,8 +1773,24 @@
         "z": "faa08695e1670414",
         "name": "switch 1",
         "rules": [
-            { "t": "change", "p": "payload", "pt": "msg", "from": "true", "fromt": "bool", "to": "Ctrl=0&BypassNum=03&BypassOpt=1", "tot": "str" },
-            { "t": "change", "p": "payload", "pt": "msg", "from": "false", "fromt": "bool", "to": "Ctrl=0&BypassNum=03&BypassOpt=2", "tot": "str" }
+            {
+                "t": "change",
+                "p": "payload",
+                "pt": "msg",
+                "from": "true",
+                "fromt": "bool",
+                "to": "Ctrl=0&BypassNum=03&BypassOpt=1",
+                "tot": "str"
+            },
+            {
+                "t": "change",
+                "p": "payload",
+                "pt": "msg",
+                "from": "false",
+                "fromt": "bool",
+                "to": "Ctrl=0&BypassNum=03&BypassOpt=2",
+                "tot": "str"
+            }
         ],
         "action": "",
         "property": "",
@@ -1403,8 +1862,24 @@
         "z": "faa08695e1670414",
         "name": "switch 1",
         "rules": [
-            { "t": "change", "p": "payload", "pt": "msg", "from": "true", "fromt": "bool", "to": "Ctrl=0&BypassNum=04&BypassOpt=1", "tot": "str" },
-            { "t": "change", "p": "payload", "pt": "msg", "from": "false", "fromt": "bool", "to": "Ctrl=0&BypassNum=04&BypassOpt=2", "tot": "str" }
+            {
+                "t": "change",
+                "p": "payload",
+                "pt": "msg",
+                "from": "true",
+                "fromt": "bool",
+                "to": "Ctrl=0&BypassNum=04&BypassOpt=1",
+                "tot": "str"
+            },
+            {
+                "t": "change",
+                "p": "payload",
+                "pt": "msg",
+                "from": "false",
+                "fromt": "bool",
+                "to": "Ctrl=0&BypassNum=04&BypassOpt=2",
+                "tot": "str"
+            }
         ],
         "action": "",
         "property": "",
@@ -1436,8 +1911,24 @@
         "z": "faa08695e1670414",
         "name": "switch 1",
         "rules": [
-            { "t": "change", "p": "payload", "pt": "msg", "from": "true", "fromt": "bool", "to": "Ctrl=0&BypassNum=05&BypassOpt=1", "tot": "str" },
-            { "t": "change", "p": "payload", "pt": "msg", "from": "false", "fromt": "bool", "to": "Ctrl=0&BypassNum=05&BypassOpt=2", "tot": "str" }
+            {
+                "t": "change",
+                "p": "payload",
+                "pt": "msg",
+                "from": "true",
+                "fromt": "bool",
+                "to": "Ctrl=0&BypassNum=05&BypassOpt=1",
+                "tot": "str"
+            },
+            {
+                "t": "change",
+                "p": "payload",
+                "pt": "msg",
+                "from": "false",
+                "fromt": "bool",
+                "to": "Ctrl=0&BypassNum=05&BypassOpt=2",
+                "tot": "str"
+            }
         ],
         "action": "",
         "property": "",
@@ -1469,8 +1960,24 @@
         "z": "faa08695e1670414",
         "name": "switch 1",
         "rules": [
-            { "t": "change", "p": "payload", "pt": "msg", "from": "true", "fromt": "bool", "to": "Ctrl=0&BypassNum=06&BypassOpt=1", "tot": "str" },
-            { "t": "change", "p": "payload", "pt": "msg", "from": "false", "fromt": "bool", "to": "Ctrl=0&BypassNum=06&BypassOpt=2", "tot": "str" }
+            {
+                "t": "change",
+                "p": "payload",
+                "pt": "msg",
+                "from": "true",
+                "fromt": "bool",
+                "to": "Ctrl=0&BypassNum=06&BypassOpt=1",
+                "tot": "str"
+            },
+            {
+                "t": "change",
+                "p": "payload",
+                "pt": "msg",
+                "from": "false",
+                "fromt": "bool",
+                "to": "Ctrl=0&BypassNum=06&BypassOpt=2",
+                "tot": "str"
+            }
         ],
         "action": "",
         "property": "",
@@ -1582,7 +2089,7 @@
         "method": "POST",
         "ret": "txt",
         "paytoqs": "ignore",
-        "url": "http://192.168.1.16:80/Wireless.htm",
+        "url": "http://192.168.1.8:8001/Wireless.htm",
         "tls": "",
         "persist": false,
         "proxy": "",
@@ -1619,12 +2126,60 @@
         "name": "Cambia comandi",
         "rules": [
             { "t": "change", "p": "payload", "pt": "msg", "from": " ", "fromt": "str", "to": "&", "tot": "str" },
-            { "t": "change", "p": "payload", "pt": "msg", "from": "telecomando", "fromt": "str", "to": "remoteNo", "tot": "str" },
-            { "t": "change", "p": "payload", "pt": "msg", "from": "sensore", "fromt": "str", "to": "detectorNo", "tot": "str" },
-            { "t": "change", "p": "payload", "pt": "msg", "from": "uscita", "fromt": "str", "to": "switchNo", "tot": "str" },
-            { "t": "change", "p": "payload", "pt": "msg", "from": "sens_codice", "fromt": "str", "to": "detector", "tot": "str" },
-            { "t": "change", "p": "payload", "pt": "msg", "from": "uscita_codice", "fromt": "str", "to": "switch", "tot": "str" },
-            { "t": "change", "p": "payload", "pt": "msg", "from": "tel_codice", "fromt": "str", "to": "remote", "tot": "str" }
+            {
+                "t": "change",
+                "p": "payload",
+                "pt": "msg",
+                "from": "telecomando",
+                "fromt": "str",
+                "to": "remoteNo",
+                "tot": "str"
+            },
+            {
+                "t": "change",
+                "p": "payload",
+                "pt": "msg",
+                "from": "sensore",
+                "fromt": "str",
+                "to": "detectorNo",
+                "tot": "str"
+            },
+            {
+                "t": "change",
+                "p": "payload",
+                "pt": "msg",
+                "from": "uscita",
+                "fromt": "str",
+                "to": "switchNo",
+                "tot": "str"
+            },
+            {
+                "t": "change",
+                "p": "payload",
+                "pt": "msg",
+                "from": "sens_codice",
+                "fromt": "str",
+                "to": "detector",
+                "tot": "str"
+            },
+            {
+                "t": "change",
+                "p": "payload",
+                "pt": "msg",
+                "from": "uscita_codice",
+                "fromt": "str",
+                "to": "switch",
+                "tot": "str"
+            },
+            {
+                "t": "change",
+                "p": "payload",
+                "pt": "msg",
+                "from": "tel_codice",
+                "fromt": "str",
+                "to": "remote",
+                "tot": "str"
+            }
         ],
         "action": "",
         "property": "",
@@ -1760,9 +2315,33 @@
         "z": "faa08695e1670414",
         "name": "Cambia comandi",
         "rules": [
-            { "t": "change", "p": "payload", "pt": "msg", "from": "tentativi", "fromt": "str", "to": "DialCnt", "tot": "str" },
-            { "t": "change", "p": "payload", "pt": "msg", "from": "telefono", "fromt": "str", "to": "Phone", "tot": "str" },
-            { "t": "change", "p": "payload", "pt": "msg", "from": "password", "fromt": "str", "to": "pwd", "tot": "str" }
+            {
+                "t": "change",
+                "p": "payload",
+                "pt": "msg",
+                "from": "tentativi",
+                "fromt": "str",
+                "to": "DialCnt",
+                "tot": "str"
+            },
+            {
+                "t": "change",
+                "p": "payload",
+                "pt": "msg",
+                "from": "telefono",
+                "fromt": "str",
+                "to": "Phone",
+                "tot": "str"
+            },
+            {
+                "t": "change",
+                "p": "payload",
+                "pt": "msg",
+                "from": "password",
+                "fromt": "str",
+                "to": "pwd",
+                "tot": "str"
+            }
         ],
         "action": "",
         "property": "",
@@ -1798,12 +2377,60 @@
         "name": "Cambia comandi",
         "rules": [
             { "t": "change", "p": "payload", "pt": "msg", "from": " ", "fromt": "str", "to": "&", "tot": "str" },
-            { "t": "change", "p": "payload", "pt": "msg", "from": "telecomando", "fromt": "str", "to": "remoteNo", "tot": "str" },
-            { "t": "change", "p": "payload", "pt": "msg", "from": "sensore", "fromt": "str", "to": "detectorNo", "tot": "str" },
-            { "t": "change", "p": "payload", "pt": "msg", "from": "uscita", "fromt": "str", "to": "switchNo", "tot": "str" },
-            { "t": "change", "p": "payload", "pt": "msg", "from": "sens_codice", "fromt": "str", "to": "detector", "tot": "str" },
-            { "t": "change", "p": "payload", "pt": "msg", "from": "uscita_codice", "fromt": "str", "to": "switch", "tot": "str" },
-            { "t": "change", "p": "payload", "pt": "msg", "from": "tel_codice", "fromt": "str", "to": "remote", "tot": "str" },
+            {
+                "t": "change",
+                "p": "payload",
+                "pt": "msg",
+                "from": "telecomando",
+                "fromt": "str",
+                "to": "remoteNo",
+                "tot": "str"
+            },
+            {
+                "t": "change",
+                "p": "payload",
+                "pt": "msg",
+                "from": "sensore",
+                "fromt": "str",
+                "to": "detectorNo",
+                "tot": "str"
+            },
+            {
+                "t": "change",
+                "p": "payload",
+                "pt": "msg",
+                "from": "uscita",
+                "fromt": "str",
+                "to": "switchNo",
+                "tot": "str"
+            },
+            {
+                "t": "change",
+                "p": "payload",
+                "pt": "msg",
+                "from": "sens_codice",
+                "fromt": "str",
+                "to": "detector",
+                "tot": "str"
+            },
+            {
+                "t": "change",
+                "p": "payload",
+                "pt": "msg",
+                "from": "uscita_codice",
+                "fromt": "str",
+                "to": "switch",
+                "tot": "str"
+            },
+            {
+                "t": "change",
+                "p": "payload",
+                "pt": "msg",
+                "from": "tel_codice",
+                "fromt": "str",
+                "to": "remote",
+                "tot": "str"
+            },
             { "t": "change", "p": "payload", "pt": "msg", "from": ";", "fromt": "str", "to": "&", "tot": "str" }
         ],
         "action": "",
@@ -1824,7 +2451,13 @@
         "version": 0,
         "state": "payload",
         "stateType": "msg",
-        "attributes": [{ "property": "last_updated", "value": "$now('[D01].[M01].[Y0001] [H01]:[m01]:[s01]', '+0100')", "valueType": "jsonata" }],
+        "attributes": [
+            {
+                "property": "last_updated",
+                "value": "$now('[D01].[M01].[Y0001] [H01]:[m01]:[s01]', '+0100')",
+                "valueType": "jsonata"
+            }
+        ],
         "inputOverride": "allow",
         "outputProperties": [],
         "x": 240,
@@ -1839,7 +2472,7 @@
         "method": "POST",
         "ret": "txt",
         "paytoqs": "ignore",
-        "url": "http://192.168.1.16:80/Zone.htm",
+        "url": "http://192.168.1.8:8001/Zone.htm",
         "tls": "",
         "persist": false,
         "proxy": "",
@@ -1876,10 +2509,42 @@
         "name": "Cambia comandi",
         "rules": [
             { "t": "change", "p": "payload", "pt": "msg", "from": " ", "fromt": "str", "to": "&", "tot": "str" },
-            { "t": "change", "p": "payload", "pt": "msg", "from": "nome=", "fromt": "str", "to": "ZoneName=", "tot": "str" },
-            { "t": "change", "p": "payload", "pt": "msg", "from": "numero=", "fromt": "str", "to": "zoneNo=", "tot": "str" },
-            { "t": "change", "p": "payload", "pt": "msg", "from": "sirena=", "fromt": "str", "to": "ZoneBell=", "tot": "str" },
-            { "t": "change", "p": "payload", "pt": "msg", "from": "tipo=", "fromt": "str", "to": "ZoneType=", "tot": "str" }
+            {
+                "t": "change",
+                "p": "payload",
+                "pt": "msg",
+                "from": "nome=",
+                "fromt": "str",
+                "to": "ZoneName=",
+                "tot": "str"
+            },
+            {
+                "t": "change",
+                "p": "payload",
+                "pt": "msg",
+                "from": "numero=",
+                "fromt": "str",
+                "to": "zoneNo=",
+                "tot": "str"
+            },
+            {
+                "t": "change",
+                "p": "payload",
+                "pt": "msg",
+                "from": "sirena=",
+                "fromt": "str",
+                "to": "ZoneBell=",
+                "tot": "str"
+            },
+            {
+                "t": "change",
+                "p": "payload",
+                "pt": "msg",
+                "from": "tipo=",
+                "fromt": "str",
+                "to": "ZoneType=",
+                "tot": "str"
+            }
         ],
         "action": "",
         "property": "",
@@ -1895,7 +2560,17 @@
         "type": "change",
         "z": "faa08695e1670414",
         "name": "modifica telecomandi 1",
-        "rules": [{ "t": "change", "p": "payload[0].zone", "pt": "msg", "from": "42", "fromt": "str", "to": "Telecomando 1", "tot": "str" }],
+        "rules": [
+            {
+                "t": "change",
+                "p": "payload[0].zone",
+                "pt": "msg",
+                "from": "42",
+                "fromt": "str",
+                "to": "Telecomando 1",
+                "tot": "str"
+            }
+        ],
         "action": "",
         "property": "",
         "from": "",
@@ -1910,7 +2585,17 @@
         "type": "change",
         "z": "faa08695e1670414",
         "name": "modifica telecomando 5",
-        "rules": [{ "t": "change", "p": "payload[0].zone", "pt": "msg", "from": "46", "fromt": "str", "to": "tramite Telecomando 5", "tot": "str" }],
+        "rules": [
+            {
+                "t": "change",
+                "p": "payload[0].zone",
+                "pt": "msg",
+                "from": "46",
+                "fromt": "str",
+                "to": "tramite Telecomando 5",
+                "tot": "str"
+            }
+        ],
         "action": "",
         "property": "",
         "from": "",
@@ -1925,7 +2610,17 @@
         "type": "change",
         "z": "faa08695e1670414",
         "name": "modifica telecomando 2",
-        "rules": [{ "t": "change", "p": "payload[0].zone", "pt": "msg", "from": "43", "fromt": "str", "to": "tramite Telecomando 2", "tot": "str" }],
+        "rules": [
+            {
+                "t": "change",
+                "p": "payload[0].zone",
+                "pt": "msg",
+                "from": "43",
+                "fromt": "str",
+                "to": "tramite Telecomando 2",
+                "tot": "str"
+            }
+        ],
         "action": "",
         "property": "",
         "from": "",
@@ -1940,7 +2635,17 @@
         "type": "change",
         "z": "faa08695e1670414",
         "name": "modifica messaggi web",
-        "rules": [{ "t": "change", "p": "payload[0].zone", "pt": "msg", "from": "70", "fromt": "str", "to": "tramite App", "tot": "str" }],
+        "rules": [
+            {
+                "t": "change",
+                "p": "payload[0].zone",
+                "pt": "msg",
+                "from": "70",
+                "fromt": "str",
+                "to": "tramite App",
+                "tot": "str"
+            }
+        ],
         "action": "",
         "property": "",
         "from": "",
@@ -1955,7 +2660,17 @@
         "type": "change",
         "z": "faa08695e1670414",
         "name": "modifica telecomando 3",
-        "rules": [{ "t": "change", "p": "payload[0].zone", "pt": "msg", "from": "44", "fromt": "str", "to": "tramite Telecomando 3", "tot": "str" }],
+        "rules": [
+            {
+                "t": "change",
+                "p": "payload[0].zone",
+                "pt": "msg",
+                "from": "44",
+                "fromt": "str",
+                "to": "tramite Telecomando 3",
+                "tot": "str"
+            }
+        ],
         "action": "",
         "property": "",
         "from": "",
@@ -1970,7 +2685,17 @@
         "type": "change",
         "z": "faa08695e1670414",
         "name": "modifica telecomando 4",
-        "rules": [{ "t": "change", "p": "payload[0].zone", "pt": "msg", "from": "45", "fromt": "str", "to": "tramite Telecomando 4", "tot": "str" }],
+        "rules": [
+            {
+                "t": "change",
+                "p": "payload[0].zone",
+                "pt": "msg",
+                "from": "45",
+                "fromt": "str",
+                "to": "tramite Telecomando 4",
+                "tot": "str"
+            }
+        ],
         "action": "",
         "property": "",
         "from": "",
@@ -1985,7 +2710,17 @@
         "type": "change",
         "z": "faa08695e1670414",
         "name": "modifica telecomando 6",
-        "rules": [{ "t": "change", "p": "payload[0].zone", "pt": "msg", "from": "47", "fromt": "str", "to": "tramite Telecomando 6", "tot": "str" }],
+        "rules": [
+            {
+                "t": "change",
+                "p": "payload[0].zone",
+                "pt": "msg",
+                "from": "47",
+                "fromt": "str",
+                "to": "tramite Telecomando 6",
+                "tot": "str"
+            }
+        ],
         "action": "",
         "property": "",
         "from": "",
@@ -2000,7 +2735,17 @@
         "type": "change",
         "z": "faa08695e1670414",
         "name": "modifica telecomando 7",
-        "rules": [{ "t": "change", "p": "payload[0].zone", "pt": "msg", "from": "48", "fromt": "str", "to": "tramite Telecomando 7", "tot": "str" }],
+        "rules": [
+            {
+                "t": "change",
+                "p": "payload[0].zone",
+                "pt": "msg",
+                "from": "48",
+                "fromt": "str",
+                "to": "tramite Telecomando 7",
+                "tot": "str"
+            }
+        ],
         "action": "",
         "property": "",
         "from": "",
@@ -2016,10 +2761,34 @@
         "z": "faa08695e1670414",
         "name": "Elimina\\Cambia numero sensore",
         "rules": [
-            { "t": "change", "p": "payload[0].zone", "pt": "msg", "from": "1", "fromt": "str", "to": "Davide", "tot": "str" },
+            {
+                "t": "change",
+                "p": "payload[0].zone",
+                "pt": "msg",
+                "from": "1",
+                "fromt": "str",
+                "to": "Davide",
+                "tot": "str"
+            },
             { "t": "change", "p": "payload[0].zone", "pt": "msg", "from": "2", "fromt": "str", "to": "", "tot": "str" },
-            { "t": "change", "p": "payload[0].zone", "pt": "msg", "from": "3", "fromt": "str", "to": "Emanuele", "tot": "str" },
-            { "t": "change", "p": "payload[0].zone", "pt": "msg", "from": "4", "fromt": "str", "to": "Maurizio", "tot": "str" },
+            {
+                "t": "change",
+                "p": "payload[0].zone",
+                "pt": "msg",
+                "from": "3",
+                "fromt": "str",
+                "to": "Emanuele",
+                "tot": "str"
+            },
+            {
+                "t": "change",
+                "p": "payload[0].zone",
+                "pt": "msg",
+                "from": "4",
+                "fromt": "str",
+                "to": "Maurizio",
+                "tot": "str"
+            },
             { "t": "change", "p": "payload[0].zone", "pt": "msg", "from": "5", "fromt": "str", "to": "", "tot": "str" },
             { "t": "change", "p": "payload[0].zone", "pt": "msg", "from": "6", "fromt": "str", "to": "", "tot": "str" },
             { "t": "change", "p": "payload[0].zone", "pt": "msg", "from": "7", "fromt": "str", "to": "", "tot": "str" },
@@ -2039,7 +2808,17 @@
         "type": "change",
         "z": "faa08695e1670414",
         "name": "modifica Tastiera centrale",
-        "rules": [{ "t": "change", "p": "payload[0].zone", "pt": "msg", "from": "90", "fromt": "str", "to": "tramite Tastiera centrale", "tot": "str" }],
+        "rules": [
+            {
+                "t": "change",
+                "p": "payload[0].zone",
+                "pt": "msg",
+                "from": "90",
+                "fromt": "str",
+                "to": "tramite Tastiera centrale",
+                "tot": "str"
+            }
+        ],
         "action": "",
         "property": "",
         "from": "",
@@ -2054,7 +2833,17 @@
         "type": "change",
         "z": "faa08695e1670414",
         "name": "modifica telecomando 8",
-        "rules": [{ "t": "change", "p": "payload[0].zone", "pt": "msg", "from": "49", "fromt": "str", "to": "tramite Telecomando 8", "tot": "str" }],
+        "rules": [
+            {
+                "t": "change",
+                "p": "payload[0].zone",
+                "pt": "msg",
+                "from": "49",
+                "fromt": "str",
+                "to": "tramite Telecomando 8",
+                "tot": "str"
+            }
+        ],
         "action": "",
         "property": "",
         "from": "",
@@ -2197,7 +2986,7 @@
         "method": "GET",
         "ret": "txt",
         "paytoqs": "ignore",
-        "url": "http://192.168.1.16:80/reboot.cgi",
+        "url": "http://192.168.1.8:8001/reboot.cgi",
         "tls": "",
         "persist": false,
         "proxy": "",
@@ -2373,8 +3162,24 @@
         "z": "faa08695e1670414",
         "name": "switch 1",
         "rules": [
-            { "t": "change", "p": "payload", "pt": "msg", "from": "true", "fromt": "bool", "to": "Ctrl=0&BypassNum=07&BypassOpt=1", "tot": "str" },
-            { "t": "change", "p": "payload", "pt": "msg", "from": "false", "fromt": "bool", "to": "Ctrl=0&BypassNum=07&BypassOpt=2", "tot": "str" }
+            {
+                "t": "change",
+                "p": "payload",
+                "pt": "msg",
+                "from": "true",
+                "fromt": "bool",
+                "to": "Ctrl=0&BypassNum=07&BypassOpt=1",
+                "tot": "str"
+            },
+            {
+                "t": "change",
+                "p": "payload",
+                "pt": "msg",
+                "from": "false",
+                "fromt": "bool",
+                "to": "Ctrl=0&BypassNum=07&BypassOpt=2",
+                "tot": "str"
+            }
         ],
         "action": "",
         "property": "",
@@ -2961,8 +3766,30 @@
         "y": 2480,
         "wires": [["e1f46b5900ea2de6"]]
     },
-    { "id": "e1f46b5900ea2de6", "type": "json", "z": "faa08695e1670414", "name": "", "property": "payload", "action": "", "pretty": false, "x": 1710, "y": 2480, "wires": [["8a92ab9d1f9d5b46"]] },
-    { "id": "41841f7850c6d545", "type": "json", "z": "faa08695e1670414", "name": "", "property": "payload", "action": "", "pretty": false, "x": 1710, "y": 2560, "wires": [["803d616a088af2d1"]] },
+    {
+        "id": "e1f46b5900ea2de6",
+        "type": "json",
+        "z": "faa08695e1670414",
+        "name": "",
+        "property": "payload",
+        "action": "",
+        "pretty": false,
+        "x": 1710,
+        "y": 2480,
+        "wires": [["8a92ab9d1f9d5b46"]]
+    },
+    {
+        "id": "41841f7850c6d545",
+        "type": "json",
+        "z": "faa08695e1670414",
+        "name": "",
+        "property": "payload",
+        "action": "",
+        "pretty": false,
+        "x": 1710,
+        "y": 2560,
+        "wires": [["803d616a088af2d1"]]
+    },
     {
         "id": "a9365bd754ffa987",
         "type": "function",
@@ -2979,7 +3806,18 @@
         "y": 3260,
         "wires": [["1d7ff9a1d75dd082"]]
     },
-    { "id": "1d7ff9a1d75dd082", "type": "json", "z": "faa08695e1670414", "name": "", "property": "payload", "action": "", "pretty": false, "x": 1670, "y": 3260, "wires": [["4e5129596b2aa88e", "033cfad6090898c2"]] },
+    {
+        "id": "1d7ff9a1d75dd082",
+        "type": "json",
+        "z": "faa08695e1670414",
+        "name": "",
+        "property": "payload",
+        "action": "",
+        "pretty": false,
+        "x": 1670,
+        "y": 3260,
+        "wires": [["4e5129596b2aa88e", "033cfad6090898c2"]]
+    },
     {
         "id": "d8c75076426d053f",
         "type": "function",
@@ -2996,7 +3834,18 @@
         "y": 3780,
         "wires": [["bffad59fd7cc22f1"]]
     },
-    { "id": "bffad59fd7cc22f1", "type": "json", "z": "faa08695e1670414", "name": "", "property": "payload", "action": "", "pretty": false, "x": 1690, "y": 3780, "wires": [["a8afed9fd75d8c45"]] },
+    {
+        "id": "bffad59fd7cc22f1",
+        "type": "json",
+        "z": "faa08695e1670414",
+        "name": "",
+        "property": "payload",
+        "action": "",
+        "pretty": false,
+        "x": 1690,
+        "y": 3780,
+        "wires": [["a8afed9fd75d8c45"]]
+    },
     {
         "id": "75482d10549b3632",
         "type": "function",
@@ -3013,14 +3862,33 @@
         "y": 4240,
         "wires": [["77e37369deec6f51"]]
     },
-    { "id": "dc116b95b629f2f7", "type": "json", "z": "faa08695e1670414", "name": "", "property": "payload", "action": "", "pretty": false, "x": 1750, "y": 4180, "wires": [["ceb58150e474c627"]] },
+    {
+        "id": "dc116b95b629f2f7",
+        "type": "json",
+        "z": "faa08695e1670414",
+        "name": "",
+        "property": "payload",
+        "action": "",
+        "pretty": false,
+        "x": 1750,
+        "y": 4180,
+        "wires": [["ceb58150e474c627"]]
+    },
     {
         "id": "77e37369deec6f51",
         "type": "change",
         "z": "faa08695e1670414",
         "name": "",
         "rules": [
-            { "t": "change", "p": "payload", "pt": "msg", "from": "size=\"48\"", "fromt": "str", "to": "", "tot": "str" },
+            {
+                "t": "change",
+                "p": "payload",
+                "pt": "msg",
+                "from": "size=\"48\"",
+                "fromt": "str",
+                "to": "",
+                "tot": "str"
+            },
             { "t": "change", "p": "payload", "pt": "msg", "from": "size=\"6\"", "fromt": "str", "to": "", "tot": "str" }
         ],
         "action": "",
@@ -3048,13 +3916,34 @@
         "y": 4720,
         "wires": [["d0e5c50426148c42"]]
     },
-    { "id": "cb3bd8709ccba502", "type": "json", "z": "faa08695e1670414", "name": "", "property": "payload", "action": "", "pretty": false, "x": 1770, "y": 4740, "wires": [["fbed63260b6e3bdd"]] },
+    {
+        "id": "cb3bd8709ccba502",
+        "type": "json",
+        "z": "faa08695e1670414",
+        "name": "",
+        "property": "payload",
+        "action": "",
+        "pretty": false,
+        "x": 1770,
+        "y": 4740,
+        "wires": [["fbed63260b6e3bdd"]]
+    },
     {
         "id": "d0e5c50426148c42",
         "type": "change",
         "z": "faa08695e1670414",
         "name": "",
-        "rules": [{ "t": "change", "p": "payload", "pt": "msg", "from": "maxlength=\"45\"/", "fromt": "str", "to": "", "tot": "str" }],
+        "rules": [
+            {
+                "t": "change",
+                "p": "payload",
+                "pt": "msg",
+                "from": "maxlength=\"45\"/",
+                "fromt": "str",
+                "to": "",
+                "tot": "str"
+            }
+        ],
         "action": "",
         "property": "",
         "from": "",
@@ -3086,8 +3975,24 @@
         "z": "faa08695e1670414",
         "name": "",
         "rules": [
-            { "t": "change", "p": "payload", "pt": "msg", "from": "maxlength=\"16\" /", "fromt": "str", "to": "", "tot": "str" },
-            { "t": "change", "p": "payload", "pt": "msg", "from": "id=\"AdmPswd\"", "fromt": "str", "to": "", "tot": "str" }
+            {
+                "t": "change",
+                "p": "payload",
+                "pt": "msg",
+                "from": "maxlength=\"16\" /",
+                "fromt": "str",
+                "to": "",
+                "tot": "str"
+            },
+            {
+                "t": "change",
+                "p": "payload",
+                "pt": "msg",
+                "from": "id=\"AdmPswd\"",
+                "fromt": "str",
+                "to": "",
+                "tot": "str"
+            }
         ],
         "action": "",
         "property": "",
@@ -3098,7 +4003,18 @@
         "y": 5320,
         "wires": [["5c6b9b7e74af797c"]]
     },
-    { "id": "5c6b9b7e74af797c", "type": "json", "z": "faa08695e1670414", "name": "", "property": "payload", "action": "", "pretty": false, "x": 1290, "y": 5320, "wires": [["5e1c29a2dd3f3f29"]] },
+    {
+        "id": "5c6b9b7e74af797c",
+        "type": "json",
+        "z": "faa08695e1670414",
+        "name": "",
+        "property": "payload",
+        "action": "",
+        "pretty": false,
+        "x": 1290,
+        "y": 5320,
+        "wires": [["5e1c29a2dd3f3f29"]]
+    },
     {
         "id": "e9a6fc98d3b098f0",
         "type": "function",
@@ -3149,9 +4065,34 @@
         "y": 2560,
         "wires": [["41841f7850c6d545"]]
     },
-    { "id": "7b7c9f8c1b348c38", "type": "ialarm status", "z": "faa08695e1670414", "server": "d67506a6425dc3c9", "waitnames": false, "x": 590, "y": 1280, "wires": [["96c7217c9f4668ba", "a19a13ef11e9c1f1"]] },
-    { "id": "bda3441f2c2c8960", "type": "ialarm events", "z": "faa08695e1670414", "server": "d67506a6425dc3c9", "x": 600, "y": 880, "wires": [["1b62c61f33848ce8", "35202ed2e7c324e1", "3991344b08c183f5", "09b6a17c92c06664"]] },
-    { "id": "8b63d5ad08dcbb37", "type": "ialarm command", "z": "faa08695e1670414", "server": "d67506a6425dc3c9", "x": 630, "y": 360, "wires": [[]] },
+    {
+        "id": "7b7c9f8c1b348c38",
+        "type": "ialarm status",
+        "z": "faa08695e1670414",
+        "server": "d67506a6425dc3c9",
+        "waitnames": false,
+        "x": 590,
+        "y": 1280,
+        "wires": [["96c7217c9f4668ba", "a19a13ef11e9c1f1"]]
+    },
+    {
+        "id": "bda3441f2c2c8960",
+        "type": "ialarm events",
+        "z": "faa08695e1670414",
+        "server": "d67506a6425dc3c9",
+        "x": 600,
+        "y": 880,
+        "wires": [["1b62c61f33848ce8", "35202ed2e7c324e1", "3991344b08c183f5", "09b6a17c92c06664"]]
+    },
+    {
+        "id": "8b63d5ad08dcbb37",
+        "type": "ialarm command",
+        "z": "faa08695e1670414",
+        "server": "d67506a6425dc3c9",
+        "x": 630,
+        "y": 360,
+        "wires": [[]]
+    },
     {
         "id": "c851cc16.b7689",
         "type": "mqtt-broker",
@@ -4221,14 +5162,22 @@
         "resend": false,
         "debugEnabled": false
     },
-    { "id": "d67506a6425dc3c9", "type": "ialarm-server", "host": "192.168.1.16", "port": "80", "username": "admin", "password": "01234", "zones": "8" },
+    {
+        "id": "d67506a6425dc3c9",
+        "type": "ialarm-server",
+        "host": "192.168.1.16",
+        "port": "8001",
+        "username": "admin",
+        "password": "Local.12$$$%%%",
+        "zones": "8"
+    },
     {
         "id": "2b77899a.ed9b86",
         "type": "server",
         "name": "homeassistant",
         "addon": true,
         "rejectUnauthorizedCerts": true,
-        "ha_boolean": "y|yes|true|on|home|open",
+        "ha_boolean": ["y", "|", "e", "s", "t", "r", "u", "o", "n", "h", "m", "p"],
         "connectionDelay": true,
         "cacheJson": true,
         "heartbeat": false,
@@ -4237,5 +5186,19 @@
         "statusTimeFormat": "h:m:s",
         "enableGlobalContextStore": false
     },
-    { "id": "7f4edd307f5ff402", "type": "ha-device-config", "name": "Centralina CasaSicura", "hwVersion": "", "manufacturer": "Node-RED", "model": "", "swVersion": "" }
+    {
+        "id": "7f4edd307f5ff402",
+        "type": "ha-device-config",
+        "name": "Centralina CasaSicura",
+        "hwVersion": "",
+        "manufacturer": "Node-RED",
+        "model": "",
+        "swVersion": ""
+    },
+    {
+        "id": "2b18d19a64bd2908",
+        "type": "global-config",
+        "env": [],
+        "modules": { "node-red-contrib-home-assistant-websocket": "0.80.3", "node-red-contrib-ialarm": "0.1.3" }
+    }
 ]
