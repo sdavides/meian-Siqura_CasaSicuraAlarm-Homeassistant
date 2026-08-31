@@ -30,7 +30,7 @@
         "correl": "",
         "expiry": "",
         "broker": "c851cc16.b7689",
-        "x": 1150,
+        "x": 1290,
         "y": 1120,
         "wires": []
     },
@@ -1113,13 +1113,14 @@
         "type": "function",
         "z": "867dee55e67cb857",
         "name": "stato",
-        "func": "msg.payload = msg.payload.status;\n    \nreturn msg;",
+        "func": "msg.payload = msg.payload.status;\n\nreturn msg;",
         "outputs": 1,
+        "timeout": "",
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 710,
+        "x": 730,
         "y": 1120,
         "wires": [["0127df0a1898f2fb"]]
     },
@@ -1180,7 +1181,7 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 900,
+        "x": 1040,
         "y": 1120,
         "wires": [["19cb7bbc70238eb9", "c41d67563f3e39fa"]]
     },
@@ -1196,8 +1197,8 @@
         "attributes": [],
         "inputOverride": "allow",
         "outputProperties": [],
-        "x": 1310,
-        "y": 1000,
+        "x": 1430,
+        "y": 880,
         "wires": [[]]
     },
     {
@@ -1236,15 +1237,15 @@
         "type": "function",
         "z": "867dee55e67cb857",
         "name": "Cerca undefined",
-        "func": "if (msg.payload === undefined) {\n    msg.payload = 'None';\n} else {\n    return false;\n}\nreturn msg;",
+        "func": "if (msg.payload === undefined) {\n    msg.payload = 'None';\n} else {\n    return null;\n}\n\nreturn msg;",
         "outputs": 1,
         "timeout": "",
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 780,
-        "y": 1000,
+        "x": 900,
+        "y": 880,
         "wires": [["0127df0a1898f2fb"]]
     },
     {
@@ -3634,8 +3635,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 1060,
-        "y": 1000,
+        "x": 1180,
+        "y": 880,
         "wires": [["d0c5cf04402ff9b1"]]
     },
     {
@@ -4745,7 +4746,7 @@
         "swVersion": ""
     },
     {
-        "id": "013309881b195aa9",
+        "id": "8bca5b815c2367fc",
         "type": "global-config",
         "env": [],
         "modules": { "node-red-contrib-home-assistant-websocket": "0.80.3", "node-red-contrib-ialarm": "0.1.3" }
