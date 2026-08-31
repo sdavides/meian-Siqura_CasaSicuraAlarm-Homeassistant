@@ -245,27 +245,6 @@
         "wires": [["348927fd15f42d1d"]]
     },
     {
-        "id": "cb124c90f1cb746b",
-        "type": "ha-sensor",
-        "z": "867dee55e67cb857",
-        "name": "Centralina Registro",
-        "entityConfig": "c2e227a8.d7a3b8",
-        "version": 0,
-        "state": "payload[0].message & payload[0].name & \" \" & payload[0].zone",
-        "stateType": "jsonata",
-        "attributes": [
-            { "property": "Zona", "value": "payload[0].zone", "valueType": "msg" },
-            { "property": "Sensore", "value": "payload[0].name", "valueType": "msg" },
-            { "property": "Messaggio", "value": "payload[0].message", "valueType": "msg" },
-            { "property": "Data", "value": "payload[0].date", "valueType": "msg" }
-        ],
-        "inputOverride": "allow",
-        "outputProperties": [],
-        "x": 2170,
-        "y": 460,
-        "wires": [[]]
-    },
-    {
         "id": "2c1891a79a860102",
         "type": "function",
         "z": "867dee55e67cb857",
@@ -3849,26 +3828,6 @@
         "debugEnabled": false
     },
     {
-        "id": "c2e227a8.d7a3b8",
-        "type": "ha-entity-config",
-        "server": "2b77899a.ed9b86",
-        "deviceConfig": "7f4edd307f5ff402",
-        "name": "Centralina Registro",
-        "version": "6",
-        "entityType": "sensor",
-        "haConfig": [
-            { "property": "name", "value": "Centralina Registro" },
-            { "property": "icon", "value": "mdi:format-list-bulleted-type" },
-            { "property": "entity_picture", "value": "" },
-            { "property": "entity_category", "value": "diagnostic" },
-            { "property": "device_class", "value": "" },
-            { "property": "unit_of_measurement", "value": "" },
-            { "property": "state_class", "value": "" }
-        ],
-        "resend": false,
-        "debugEnabled": false
-    },
-    {
         "id": "cc2c45217d90dcd4",
         "type": "ha-entity-config",
         "server": "2b77899a.ed9b86",
@@ -4702,6 +4661,26 @@
         "debugEnabled": false
     },
     {
+        "id": "c2e227a8.d7a3b8",
+        "type": "ha-entity-config",
+        "server": "2b77899a.ed9b86",
+        "deviceConfig": "7f4edd307f5ff402",
+        "name": "Centralina Registro",
+        "version": "6",
+        "entityType": "sensor",
+        "haConfig": [
+            { "property": "name", "value": "Centralina Registro" },
+            { "property": "icon", "value": "mdi:format-list-bulleted-type" },
+            { "property": "entity_picture", "value": "" },
+            { "property": "entity_category", "value": "diagnostic" },
+            { "property": "device_class", "value": "" },
+            { "property": "unit_of_measurement", "value": "" },
+            { "property": "state_class", "value": "" }
+        ],
+        "resend": false,
+        "debugEnabled": false
+    },
+    {
         "id": "209e05eeb58a8d20",
         "type": "ha-entity-config",
         "server": "2b77899a.ed9b86",
@@ -4746,7 +4725,7 @@
         "swVersion": ""
     },
     {
-        "id": "8bca5b815c2367fc",
+        "id": "f803543d968cefa6",
         "type": "global-config",
         "env": [],
         "modules": { "node-red-contrib-home-assistant-websocket": "0.80.3", "node-red-contrib-ialarm": "0.1.3" }
